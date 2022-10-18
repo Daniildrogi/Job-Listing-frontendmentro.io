@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --DesaturatedDarkCyan: hsl(180, 29%, 50%);
+  --DesaturatedDarkCyanShadow: hsla(180, 29%, 50%, 0.24);
+  --LightGrayishCyan1: hsl(180, 52%, 96%);
+  --LightGrayishCyan: hsl(180, 31%, 95%);
+  --DarkGrayishCyan: hsl(180, 8%, 52%);
+  --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+  font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--LightGrayishCyan);
+}
+
+
+
+.flex {
+  display: flex;
+}
+
+.none {
+  display: none;
+}
+
+.none {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 100;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 55px;
+  width: 1440px;
+  height: 155px;
+  background-image: url(/images/bg-header-desktop.svg);
+  background-color: var(--DesaturatedDarkCyan);
+  background-repeat: no-repeat;
+  position: static;
+  top: 0;
+  bottom: auto;
+  margin-bottom: 5rem;
+  /* background-position: center; */
+}
+
+
+
+.popup-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 70px;
+  max-height: 70px;
+  width: 1100px;
+  max-width: 1100px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: white;
+  top: 120px;
+  left: 410px;
+  border-radius: 3px;
+  box-shadow: 0rem 1em 2rem 0.1rem var(--DesaturatedDarkCyanShadow);
+}
+
+.clear-button {
+  text-decoration: none;
+  color: var(--DesaturatedDarkCyan);
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  text-decoration: underline;
+}
+
+.search-option {
+  position: relative;
+  text-decoration: none;
+  border: none;
+  font-weight: 700;
+  color: var(--DesaturatedDarkCyan);
+  background-color: var(--LightGrayishCyan1);
+  height: 2rem;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.search-option::after {
+  content: url(./images/icon-remove.svg);
+  font-size: 1rem;
+  cursor: pointer;
+  position: absolute;
+  right: -1.9rem;
+  top: 0;
+  color: var(--LightGrayishCyan1);
+  background-color: var(--DesaturatedDarkCyan);
+  padding-top: 0.6rem;
+  padding-bottom: 0.3rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border-radius: 3px;
+}
+
+.search-option:hover::after {
+  background-color: black;
+}
+
+.search-option:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.card-left-image-wrapper {
+  margin-right: 15px;
+
+}
+
+.card-container {
+  z-index: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  height: 155px;
+  width: 1100px;
+  border-radius: 3px;
+  background-color: white;
+  margin-bottom: 2rem;
+  box-shadow: 0rem 1em 2rem 0.1rem var(--DesaturatedDarkCyanShadow);
+}
+
+.card-container:hover {
+  border-left: 5px var(--DesaturatedDarkCyan) solid;
+
+}
+
+
+
+
+
+.card-left {
+  align-items: center;
+}
+
+.card-left-text-wrapper {
+  height: 90px;
+}
+
+.card-left-top-row {
+  margin-bottom: 0.8rem;
+  align-items: center;
+}
+
+.company-name {
+  margin-right: 10px;
+  font-weight: 700;
+  color: var(--DesaturatedDarkCyan);
+}
+
+.new {
+  margin-right: 10px;
+  color: white;
+  background-color: var(--DesaturatedDarkCyan);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.4rem 0.4rem 0.3rem 0.4rem;
+  border-radius: 15px;
+}
+
+.featured {
+  margin-right: 10px;
+  color: white;
+  background-color: var(--VeryDarkGrayishCyan);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.4rem 0.4rem 0.3rem 0.4rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.vacancy {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.vacancy:hover {
+  color: var(--DesaturatedDarkCyan);
+}
+
+.card-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-right-skillset {
+  color: var(--DesaturatedDarkCyan);
+  background-color: var(--LightGrayishCyan1);
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-right-skillset:hover {
+  background-color: var(--DesaturatedDarkCyan);
+  color: var(--LightGrayishCyan1);
+  margin-bottom: 0;
+}
+
+.card-right-skillset:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.bottom-row {
+
+  font-size: 0.9rem;
+  color: var(--DarkGrayishCyan);
+}
+
+.bottom-row:not(:last-child) {
+  margin-right: 2rem;
+
+}
+
+
+@media screen and (max-width: 375px) {
+  header {
+    width: 375px;
+  }
+
+  .container {
+    width: 375px;
+  }
+
+  .popup-search {
+    position: absolute;
+    z-index: 100;
+    padding: 5px;
+    flex-direction: row;
+    min-width: 325px;
+    max-width: 325px;
+    left: 0;
+    top: 20%;
+    margin-left: 1.5rem;
+    padding: 1.5rem 1.5rem;
+    height: fit-content;
+    max-height: fit-content;
+    margin-bottom: 10rem;
+  }
+
+  .search-option{
+    margin-bottom: 1rem;
+  }
+
+
+  .popup-container {
+    /* flex-direction: column; */
+    justify-content: unset;
+
+flex-wrap: wrap;
+margin-right: 1rem;
+  }
+
+ 
+
+  .card-container {
+
+    height: max-content;
+    width: 325px;
+    flex-direction: column;
+    padding: 1.2rem;
+  }
+
+  .card-left {
+
+    flex-direction: column;
+
+    margin-bottom: 1rem;
+    margin-left: -4.5rem;
+
+  }
+
+  .card-right {
+    flex-wrap: wrap;
+    border-top: 1px var(--VeryDarkGrayishCyan) dotted;
+    padding-top: 1rem;
+  }
+
+  .card-right-skillset {
+    margin-bottom: 1rem;
+
+  }
+
+  .card-right-skillset:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .card-left-image-wrapper {
+
+    position: relative;
+
+    left: -6rem;
+    top: -4rem;
+    margin-right: 0;
+    margin-bottom: -3rem;
+
+  }
+
+  img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
