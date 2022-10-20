@@ -6,6 +6,6 @@
 
      The project is not well sctructed, code wise, but i pointed that to myself, as a goal for future tries. 
 
-    I gladly will accept any help or suggestions on this issue, as well as any advices or edits. 
+     I gladly will accept any help or suggestions on this issue, as well as any advices or edits. 
 
     
