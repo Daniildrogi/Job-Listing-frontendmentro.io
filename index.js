@@ -2,6 +2,7 @@
 const main = document.querySelector(".container-for-cards")
 const searchWindow = document.querySelector(".popup-search")
 const searchContainer = document.querySelector(".popup-container")
+const header = document.querySelector("header")
 let searchSet = new Set()
 let searchArray = [...searchSet]
 
@@ -154,6 +155,15 @@ const filterData = (data) => {
 
 
 }
+
+const mobileJS = () => {
+if (searchWindow.classList.contains("visible")) {
+    header.classList.add("header-mobile")
+    console.log(header)
+}
+}
+
+
 // Adding eventlistener 
 getData.then((data) => {
 
@@ -162,7 +172,8 @@ getData.then((data) => {
     main.innerHTML = null
     applySearch(e, data)
     createCard(filterData(data))
-
+    mobileJS()
+  
 
   })
 })
