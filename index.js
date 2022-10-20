@@ -69,6 +69,7 @@ const applySearch = function (e, data) {
   if (e.target.classList == "card-right-skillset") {
     searchContainer.innerHTML = null
     searchWindow.classList.add("visible")
+    searchWindow.classList.remove("none")
     searchSet.add(e.target.innerHTML)
     searchArray = [...searchSet]
 
@@ -84,6 +85,7 @@ const applySearch = function (e, data) {
   if (e.target.classList == "vacancy") {
     searchContainer.innerHTML = null
     searchWindow.classList.add("visible")
+    searchWindow.classList.remove("none")
    for (let j = 0; j < data.length; j++) {
     if (e.target.innerHTML == data[j].position) {
       console.log(data[j].role, data[j].level)
@@ -108,6 +110,7 @@ const applySearch = function (e, data) {
 
   if (e.target.classList == "clear-button") {
     searchWindow.classList.remove("visible")
+    searchWindow.classList.add("none")
 
     searchContainer.innerHTML = null
 
@@ -160,6 +163,9 @@ const mobileJS = () => {
 if (searchWindow.classList.contains("visible")) {
     header.classList.add("header-mobile")
     console.log(header)
+}
+if (searchWindow.classList.contains("none")) {
+    header.classList.remove("header-mobile")
 }
 }
 
